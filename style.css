@@ -1,0 +1,59 @@
+html, body {
+    background-color: white;
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: 410%;
+    color: darkred
+}
+
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 100;
+    color: darkred
+}
+
+h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: darkred
+}
+
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.highlight {
+    color: green;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.info{
+    color: darkred;
+    font-size: small
+}
+
+#l-align{
+    text-align: left;
+}
+
+#c-align{
+    text-align: center;
+}
+
+#j-align {
+    text-align: justify;
+}
+
+.main-vis {
+    width: 100%;
+}
+
+.pure-g{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
