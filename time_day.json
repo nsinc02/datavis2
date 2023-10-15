@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Multi-series line chart with labels and interactive highlight on hover.  We also set the selection's initial value to provide a better screenshot",
+  "data": {
+    "url": "https://raw.githubusercontent.com/nsinc02/datavis2/main/ARDD%20Fatalities%20Days.csv"
+  },
+  "encoding": {
+    "x": {"field": "Time", "type": "nominal", "sort": []},
+    "y": {"aggregate": "sum", "field": "Count", "title": "Fatalities"},
+    "color": {
+      "condition": {
+        "param": "hover",
+        "field": "Day",
+        "type": "nominal",
+        "sort": []
+      },
+      "value": "grey"
+    },
+    "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.2}
+  },
+  "layer": [
+    {
+      "description": "transparent layer to make it easier to trigger selection",
+      "params": [
+        {
+          "name": "hover",
+          "value": [{"Day": "Monday"}],
+          "select": {"type": "point", "fields": ["Day"], "on": "mouseover"}
+        }
+      ],
+      "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+    },
+    {"mark": "line"}
+  ],
+  "config": {"view": {"stroke": null}}
+}

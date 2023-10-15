@@ -25,7 +25,7 @@
     "color": {
       "field": "Fatalities per 100,000",
       "type": "quantitative",
-      "scale": {"type": "linear"}
+      "scale": {"type": "linear","scheme":"yelloworangered"}
     },
     "tooltip": [
       {"field": "properties.name_en", "type": "nominal", "title": "State"},

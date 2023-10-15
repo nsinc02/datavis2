@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/nsinc02/datavis2/main/ARDD%20Fatalities%20Stack2.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Age Group", "type": "ordinal", "title": "Age Group"},
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "title": "No. fatalities (1989 - 2023)"
+    },
+    "color": {
+      "field": "Road User",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Passenger",
+          "Motorcycle rider",
+          "Driver",
+          "Pedal cyclist",
+          "Pedestrian",
+          "Other"
+        ],
+        "range": [
+          "#7fc97f",
+          "#beaed4",
+          "#fdc086",
+          "#a6cee3",
+          "#386cb0",
+          "#eb4034"
+        ]
+      },
+      "title": "Road User Type"
+    },
+    "tooltip": [
+      {"field": "Age Group", "type": "nominal", "title": "Age Group"},
+      {"field": "Road User", "type": "nominal", "title": "Road User Type"},
+      {
+        "aggregate": "count",
+        "type": "quantitative",
+        "title": "No. fatalities (1989 - 2023)"
+      }
+    ]
+  },
+  "config": {}
+}

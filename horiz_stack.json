@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/nsinc02/datavis2/main/ARDD%20Fatalities%20August%202023%20clean%201.csv"
+  },
+  "height": {"step": 17},
+  "encoding": {"y": {"field": " National Remoteness Areas"}},
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "aggregate": "count",
+          "title": "Fatalities",
+          "stack": "normalize"
+        },
+        "color": {
+          "field": "Road User",
+          "scale": {
+            "range": [
+              "#fdc086",
+              "#beaed4",
+              "#d47b74",
+              "#eb4034",
+              "#7fc97f",
+              "#a6cee3",
+              "#386cb0"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "config": {}
+}

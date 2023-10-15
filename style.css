@@ -49,8 +49,24 @@ p {
     text-align: justify;
 }
 
-.main-vis {
+.vis1 {
     width: 100%;
+    padding-left: 8%;
+}
+
+.vis2 {
+    width: 100%;
+    padding-left: 4%;
+}
+
+.vis3 {
+    width: 100%;
+    padding-left: 30%;
+}
+
+.vis4 {
+    width: 100%;
+    padding-left: 5%;
 }
 
 .pure-g{
